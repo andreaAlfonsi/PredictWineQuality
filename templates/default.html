@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Webapp</title>
+<style>
+
+*{
+	background-color: #e9efbf;
+	color:black;
+	padding:1px;
+}
+
+label {
+	font-weight: bold;
+	font-family: colibri;
+}
+
+input {
+margin:5px;
+background-color:white;
+}
+
+fieldset{
+	padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+<h1>Predizione del Valore della Qualità dei Vini</h1>
+<div class="input_data">
+<form action="/" method="post">
+<fieldset> <legend> <h2>Inserisci i dati del vino</h2></legend>
+<label>Tipo di vino: <br/><input type="radio" name="kind" value="white" /> Bianco</label>
+<label><input type="radio" name="kind" value="red" /> Rosso</label><br/>
+<label>Acidità fissa <input type="number" name="acidity" step=any ></label> <br/>
+<label>Acidità volatile <input type="number" name="v_acidity" step=any></label> <br/>
+<label>Acido citrico <input type="number" name="c_acidity" step=any></label> <br/>
+<label>Zucchero residuo <input type="number" name="sugar" step=any></label> <br/>
+<label>Cloruri <input type="number" name="chlorides" step=any></label> <br/>
+<label>Biossido di zolfo libero <input type="number" name="sulfur" step=any></label> <br/>
+<label>Biossido di zolfo totale <input type="number" name="t_sulfur" step=any ></label> <br/>
+<label>Densità <input type="number" name="density" step=any></label> <br/>
+<label>pH <input type="number" name="ph" step=any></label> <br/>
+<label>Solfati <input type="number" name="sulph" step=any> </label> <br/>
+<label>Alcol <input type="number" name="alcohol" step=any> </label> <br/>
+</fieldset><br/>
+<input type="submit" style="padding:10px; margin:10px;">
+</form>
+</div>
+<br/>
+<div class="output">
+<label>Qualità: <output>{{ result }}</output></label>
+</div>
+<div style="padding:5px;"><h2>Link utili:</h2>
+Informazioni sul vino verde: <a href="https://it.wikipedia.org/wiki/Vinho_Verde">Qui</a><br/>
+DataSet da cui è sviluppato il modello predittivo: <a href="https://archive.ics.uci.edu/ml/datasets/Wine+Quality">Qui</a><br/><br/>
+
+Citazione richiesta per l'uso del DataSet:<br/>
+<i>P. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. <br/>
+Modeling wine preferences by data mining from physicochemical properties. In Decision Support Systems, Elsevier, 47(4):547-553, 2009.
+<br/></div>
+</body>
+</html>
